@@ -1,0 +1,15 @@
+{% extends "activities/base.html" %}
+{% block content %}
+  <div>
+    <a class="btn btn-sm btn-info"href="{%url 'post-create'%}">Create</a>
+  </div>
+  <div class="todo-list">
+    {% for task in tasks  %}
+        <div class="item-row">
+        <span>{{task}}</span>  
+          <a class="btn btn-sm btn-info"href="{%url 'post-update' task.id %}">Update</a>
+          <a class="btn btn-sm btn-danger"href="{%url 'delete-view' task.id %}">Delete</a>
+        </div>
+    {% endfor %}
+{% endblock content%}
+</div>

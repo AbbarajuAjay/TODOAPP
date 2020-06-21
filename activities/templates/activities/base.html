@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+       <html lang="en">
+       <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+         <!-- Bootstrap CSS -->
+       	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+       	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+         <title>ToDO</title>
+          <style>
+
+          body,
+          html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: #7abecc !important;
+          }
+          .user_card {
+            width: 350px;
+            margin-top: auto;
+            margin-bottom: auto;
+            background: #74cfbf;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 5px;
+          }
+            .nav-link2{
+                position:absolute;
+              	bottom:14px;
+              	right:100px;
+                color:white;
+            }
+
+            .center-column{
+          		width:600px;
+          		margin: 20px auto;
+          		padding:20px;
+          		background-color: #fff;
+          		border-radius: 3px;
+          		box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
+          	}
+
+          	.item-row{
+          		background-color: #906abd;
+          		margin: 10px;
+          		padding: 20px;
+          		border-radius: 3px;
+          		color: #fff;
+          		font-size: 16px;
+          		box-shadow: 0px -1px 10px -4px rgba(0,0,0,0.75);
+          	}
+
+
+
+            .block{
+                  	float:right;
+                  	width:33.3%;
+                    background: yellow;
+                  	border:1px solid #ccc;
+                  	padding:10px;
+                  	box-sizing:border-box;
+                  }
+          </style>
+
+       </head>
+        <body>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+              <a class="navbar-brand" href="#">TODO APP</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="{% url 'viewall-view' %}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link2"  href="{% url 'logout'%}">Logout</a>
+                    </li>
+                  </ul>
+               </div>
+             </nav>
+          <br>
+            <div class="center-column">
+                {% block content%} {% endblock%}
+          </div>
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+        </body>
+       </html>
